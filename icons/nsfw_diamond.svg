@@ -1,0 +1,6 @@
+<svg viewBox="0 0 48 48" height="48" width="48" xmlns="http://www.w3.org/2000/svg">
+  
+  <rect stroke-width="4" stroke="#ffffff" fill="#ef4444" transform="rotate(45 24 24)" rx="8" height="36" width="36" y="6" x="6"></rect>
+  
+  <text letter-spacing="-1" font-family="Arial Black, sans-serif" font-weight="900" font-size="12.5" fill="#ffffff" text-anchor="middle" y="28" x="24">NSFW</text>
+</svg>
