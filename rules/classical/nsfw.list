@@ -3,6 +3,7 @@ DOMAIN-SUFFIX, nineyu.com
 DOMAIN-SUFFIX, surrit.com
 DOMAIN, fourhoi.com
 DOMAIN-SUFFIX,missav.ws
+DOMAIN-SUFFIX,missav.ai
 DOMAIN-SUFFIX,missav.com
 DOMAIN-SUFFIX,missav.live
 # Jable
@@ -60,8 +61,8 @@ DOMAIN-SUFFIX,avbase.net
 DOMAIN-SUFFIX,fanza.jp
 DOMAIN-SUFFIX,dmm.co.jp
 DOMAIN-SUFFIX,dmm.com
-# jkfourm
-DOMAIN-SUFFIX,jkfourm.net
+# jkforum
+DOMAIN-SUFFIX,jkforum.net
 DOMAIN-SUFFIX,hare200.com
 DOMAIN-SUFFIX,mymyatt.net
 # 其他
