@@ -453,106 +453,66 @@
   - "select":
       "name": "香港"
       "policies":
-        - "香港-手动节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/HongKong.svg"
-      "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "select":
-      "name": "香港-手动节点"
-      "policies":
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\\s*kong)"
+      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/HongKong.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "日本"
       "policies":
-        - "日本-手动节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Japan.svg"
-      "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "select":
-      "name": "日本-手动节点"
-      "policies":
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇯🇵|日本|东京|大阪|京都|(?<![A-Za-z])JPN?(?![A-Za-z])|japan)"
+      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Japan.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "美国"
       "policies":
-        - "美国-手动节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/America.svg"
-      "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "select":
-      "name": "美国-手动节点"
-      "policies":
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇺🇸|美国|纽约|洛杉矶|旧金山|芝加哥|休斯顿|迈阿密|西雅图|波士顿|华盛顿|拉斯维加斯|圣何塞|圣地亚哥|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\\s*states)"
+      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/America.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "新加坡"
       "policies":
-        - "新加坡-手动节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Singapore.svg"
-      "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "select":
-      "name": "新加坡-手动节点"
-      "policies":
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore)"
+      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Singapore.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "台湾省"
       "policies":
-        - "台湾省-手动节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Taiwan.svg"
-      "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "select":
-      "name": "台湾省-手动节点"
-      "policies":
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇹🇼|台湾|台北|高雄|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)"
+      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Taiwan.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "低倍率节点"
       "policies":
-        - "低倍率节点-手动节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Available.svg"
-      "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "select":
-      "name": "低倍率节点-手动节点"
-      "policies":
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(^(?!.*(?:剩|期)).*(?:(?<!\\d)0(\\.[0-5]|[*×✕✖⨯⨉x倍]))|(?:[*×✕✖⨯⨉x]0)|^(?!.*(?:客户端|软件)).*下载|低倍|免费|(?<![A-Za-z])free(?![A-Za-z]))"
+      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Available.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "高倍率节点"
       "policies":
-        - "高倍率节点-手动节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Airport.svg"
-      "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "select":
-      "name": "高倍率节点-手动节点"
-      "policies":
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(?:[*×✕✖⨯⨉x](?:[2-9]\\d*|[1-9]\\d+)(?:\\.\\d+)?)|(?:(?<![\\d.])(?:[2-9]\\d*|[1-9]\\d+)(?:\\.\\d+)?(?:倍|[*×✕✖⨯⨉x]))"
+      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Airport.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "其他节点"
       "policies":
-        - "其他节点-手动节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/WorldMap.svg"
-      "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "select":
-      "name": "其他节点-手动节点"
-      "policies":
         - "机场订阅"
       "flatten": true
       "filter": "(?i)^(?!.*(?:🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\\s*kong|🇯🇵|日本|东京|大阪|京都|(?<![A-Za-z])JPN?(?![A-Za-z])|japan|🇺🇸|美国|纽约|洛杉矶|旧金山|芝加哥|休斯顿|迈阿密|西雅图|波士顿|华盛顿|拉斯维加斯|圣何塞|圣地亚哥|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\\s*states|🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore|🇹🇼|台湾|台北|高雄|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)).*$"
+      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/WorldMap.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "external":
       "name": "机场订阅"
