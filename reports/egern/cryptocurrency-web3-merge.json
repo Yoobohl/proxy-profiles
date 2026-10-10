@@ -1,0 +1,42 @@
+{
+  "base": "rules/egern/cryptocurrency.yaml",
+  "errors": [],
+  "output": "rules/egern/cryptocurrency.yaml",
+  "output_rule_counts": {
+    "domain_keyword_set": 6,
+    "domain_set": 10,
+    "domain_suffix_set": 414
+  },
+  "sources": [
+    {
+      "path": "rules/classical/web3.list",
+      "rule_counts": {
+        "DOMAIN": 10,
+        "DOMAIN-KEYWORD": 6,
+        "DOMAIN-SUFFIX": 401,
+        "PROCESS-NAME": 3
+      }
+    }
+  ],
+  "status": "converted_with_reported_unsupported_rules",
+  "unsupported_rules": [
+    {
+      "line": 74,
+      "reason": "Egern has no equivalent process-name matcher.",
+      "rule": "PROCESS-NAME,Binance.exe",
+      "source": "rules/classical/web3.list"
+    },
+    {
+      "line": 107,
+      "reason": "Egern has no equivalent process-name matcher.",
+      "rule": "PROCESS-NAME,Huobi.exe",
+      "source": "rules/classical/web3.list"
+    },
+    {
+      "line": 115,
+      "reason": "Egern has no equivalent process-name matcher.",
+      "rule": "PROCESS-NAME,OKX.exe",
+      "source": "rules/classical/web3.list"
+    }
+  ]
+}
