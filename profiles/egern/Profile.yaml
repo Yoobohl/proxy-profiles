@@ -2,6 +2,7 @@
 # Add the actual subscription URL to the 机场订阅 external.urls array.
 "ipv6": true
 "allow_external_connections": true
+"vif_only": true
 "hijack_dns":
   - "*"
 "real_ip_domains":
