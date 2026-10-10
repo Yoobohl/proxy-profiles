@@ -1,0 +1,86 @@
+name: Convert SVG icons to PNG
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "*.svg"
+      - "**/*.svg"
+      - "*.SVG"
+      - "**/*.SVG"
+      - ".github/workflows/svg-to-png.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install SVG renderer
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends libcairo2
+          python -m pip install --disable-pip-version-check "CairoSVG>=2.7,<3"
+
+      - name: Convert all repository SVGs to 144x144 PNGs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import struct
+          import cairosvg
+
+          root = Path(".")
+          svg_files = sorted(
+              (
+                  path
+                  for path in root.rglob("*")
+                  if path.is_file()
+                  and path.suffix.lower() == ".svg"
+                  and ".git" not in path.parts
+              ),
+              key=lambda path: path.as_posix().casefold(),
+          )
+          if not svg_files:
+              raise SystemExit("No SVG files found to convert")
+
+          for svg in svg_files:
+              png = svg.with_suffix(".png")
+              cairosvg.svg2png(
+                  url=str(svg),
+                  write_to=str(png),
+                  output_width=144,
+                  output_height=144,
+              )
+              data = png.read_bytes()
+              if data[:8] != b"\x89PNG\r\n\x1a\n":
+                  raise RuntimeError(f"Invalid PNG output: {png}")
+              width, height = struct.unpack(">II", data[16:24])
+              if (width, height) != (144, 144):
+                  raise RuntimeError(f"Unexpected image size for {png}: {width}x{height}")
+              print(f"Generated {png} (144x144)")
+          PY
+
+      - name: Commit generated PNGs
+        shell: bash
+        run: |
+          git add --all
+          if git diff --cached --quiet; then
+            echo "Generated PNGs are already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(icons): generate 144px PNGs from SVGs"
+          git push origin "HEAD:${GITHUB_REF}"
