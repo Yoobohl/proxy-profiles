@@ -1,0 +1,288 @@
+name: Import external SVG profile icons
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "profiles/**/*.yaml"
+      - "profiles/**/*.yml"
+      - ".github/workflows/import-external-svg-icons.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-icons:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install SVG renderer and YAML parser
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends libcairo2
+          python -m pip install --disable-pip-version-check "CairoSVG>=2.7,<3" "PyYAML>=6,<7"
+
+      - name: Import external SVG icons and rewrite profile links
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          python - <<'PY'
+          from __future__ import annotations
+
+          import hashlib
+          import ipaddress
+          import json
+          import os
+          import re
+          import socket
+          import struct
+          from pathlib import Path, PurePosixPath
+          from urllib.parse import unquote, urljoin, urlsplit
+          from urllib.request import HTTPRedirectHandler, Request, build_opener
+
+          import cairosvg
+          import yaml
+          from defusedxml import ElementTree
+          from yaml.nodes import MappingNode, ScalarNode, SequenceNode
+
+          MAX_ICON_BYTES = 5 * 1024 * 1024
+          REPOSITORY = os.environ["GITHUB_REPOSITORY"]
+          DEFAULT_BRANCH = os.environ.get("DEFAULT_BRANCH") or "main"
+          REPO_PARTS = REPOSITORY.lower().split("/", maxsplit=1)
+          ICON_DIR = Path("icons")
+
+          def is_own_repository_url(url: str) -> bool:
+              parsed = urlsplit(url)
+              host = (parsed.hostname or "").lower()
+              segments = [unquote(part).lower() for part in parsed.path.split("/") if part]
+              if len(REPO_PARTS) != 2:
+                  return False
+
+              if host in {"cdn.jsdmirror.com", "cdn.jsdelivr.net"}:
+                  for index, segment in enumerate(segments[:-2]):
+                      if segment == "gh":
+                          owner = segments[index + 1]
+                          package = segments[index + 2].split("@", maxsplit=1)[0]
+                          if [owner, package] == REPO_PARTS:
+                              return True
+                  return False
+
+              if host in {"raw.githubusercontent.com", "github.com"}:
+                  return segments[:2] == REPO_PARTS
+              return False
+
+          def validate_public_https_url(url: str) -> None:
+              parsed = urlsplit(url)
+              if parsed.scheme.lower() != "https" or not parsed.hostname:
+                  raise ValueError(f"Only absolute HTTPS icon URLs are allowed: {url}")
+              if parsed.username or parsed.password:
+                  raise ValueError(f"Credentials in icon URLs are not allowed: {url}")
+              port = parsed.port or 443
+              if port != 443:
+                  raise ValueError(f"Non-standard HTTPS port in icon URL: {url}")
+
+              hostname = parsed.hostname
+              try:
+                  addresses = {ipaddress.ip_address(hostname)}
+              except ValueError:
+                  records = socket.getaddrinfo(hostname, port, type=socket.SOCK_STREAM)
+                  addresses = {ipaddress.ip_address(record[4][0]) for record in records}
+              if not addresses or any(not address.is_global for address in addresses):
+                  raise ValueError(f"Icon URL does not resolve exclusively to public IPs: {url}")
+
+          class PublicHttpsRedirectHandler(HTTPRedirectHandler):
+              def redirect_request(self, request, file_pointer, code, message, headers, new_url):
+                  target = urljoin(request.full_url, new_url)
+                  validate_public_https_url(target)
+                  return super().redirect_request(
+                      request, file_pointer, code, message, headers, target
+                  )
+
+          OPENER = build_opener(PublicHttpsRedirectHandler())
+
+          def fetch_svg(url: str) -> bytes | None:
+              validate_public_https_url(url)
+              request = Request(
+                  url,
+                  headers={"User-Agent": "proxy-profiles-external-svg-import/1.0"},
+              )
+              with OPENER.open(request, timeout=30) as response:
+                  length = response.headers.get("Content-Length")
+                  if length and int(length) > MAX_ICON_BYTES:
+                      raise ValueError(f"SVG exceeds {MAX_ICON_BYTES} bytes: {url}")
+                  data = response.read(MAX_ICON_BYTES + 1)
+              if len(data) > MAX_ICON_BYTES:
+                  raise ValueError(f"SVG exceeds {MAX_ICON_BYTES} bytes: {url}")
+
+              try:
+                  root = ElementTree.fromstring(data)
+              except Exception as error:
+                  print(f"Skipping non-SVG response for {url}: {error}")
+                  return None
+              if root.tag.rsplit("}", maxsplit=1)[-1].lower() != "svg":
+                  print(f"Skipping response whose root element is not <svg>: {url}")
+                  return None
+              return data
+
+          def safe_stem(url: str) -> str:
+              name = PurePosixPath(unquote(urlsplit(url).path)).name
+              stem = name[:-4] if name.lower().endswith(".svg") else Path(name).stem
+              stem = re.sub(r"[^A-Za-z0-9._-]+", "-", stem).strip("._-")
+              return stem or f"external-icon-{hashlib.sha256(url.encode()).hexdigest()[:10]}"
+
+          def choose_svg_path(url: str, data: bytes) -> Path:
+              ICON_DIR.mkdir(parents=True, exist_ok=True)
+              stem = safe_stem(url)
+              url_suffix = hashlib.sha256(url.encode("utf-8")).hexdigest()[:10]
+              content_suffix = hashlib.sha256(data).hexdigest()[:10]
+              candidates = [
+                  ICON_DIR / f"{stem}.svg",
+                  ICON_DIR / f"{stem}-{url_suffix}.svg",
+                  ICON_DIR / f"{stem}-{url_suffix}-{content_suffix}.svg",
+              ]
+
+              existing_files = list(ICON_DIR.iterdir())
+              for candidate in candidates:
+                  same_name = next(
+                      (path for path in existing_files if path.name.casefold() == candidate.name.casefold()),
+                      None,
+                  )
+                  png_name = candidate.with_suffix(".png").name.casefold()
+                  same_png = next(
+                      (path for path in existing_files if path.name.casefold() == png_name),
+                      None,
+                  )
+                  if same_name is not None:
+                      if same_name.is_file() and same_name.read_bytes() == data:
+                          return same_name
+                      continue
+                  if same_png is not None:
+                      # Avoid overwriting a PNG that was not generated from this SVG.
+                      continue
+                  return candidate
+              raise FileExistsError(f"Could not choose a collision-free icon filename for {url}")
+
+          def write_if_changed(path: Path, data: bytes) -> bool:
+              if path.is_file() and path.read_bytes() == data:
+                  return False
+              path.parent.mkdir(parents=True, exist_ok=True)
+              temporary = path.with_name(path.name + ".tmp")
+              temporary.write_bytes(data)
+              temporary.replace(path)
+              return True
+
+          def import_svg(url: str) -> str | None:
+              parsed = urlsplit(url)
+              if parsed.scheme.lower() != "https" or not parsed.path.lower().endswith(".svg"):
+                  print(f"Leaving non-HTTPS or non-.svg icon unchanged: {url}")
+                  return None
+
+              svg_data = fetch_svg(url)
+              if svg_data is None:
+                  return None
+
+              svg_path = choose_svg_path(url, svg_data)
+              png_path = svg_path.with_suffix(".png")
+              write_if_changed(svg_path, svg_data)
+              png_data = cairosvg.svg2png(
+                  bytestring=svg_data,
+                  output_width=144,
+                  output_height=144,
+              )
+              if png_data[:8] != b"\x89PNG\r\n\x1a\n":
+                  raise RuntimeError(f"Invalid PNG generated from {url}")
+              width, height = struct.unpack(">II", png_data[16:24])
+              if (width, height) != (144, 144):
+                  raise RuntimeError(f"Unexpected output size for {url}: {width}x{height}")
+              write_if_changed(png_path, png_data)
+
+              relative_png = png_path.as_posix()
+              cdn_url = (
+                  f"https://cdn.jsdmirror.com/gh/{REPOSITORY}"
+                  f"@{DEFAULT_BRANCH}/{relative_png}"
+              )
+              print(f"Imported {url} -> {svg_path} + {png_path}")
+              return cdn_url
+
+          def icon_nodes(node):
+              if isinstance(node, MappingNode):
+                  for key, value in node.value:
+                      if isinstance(key, ScalarNode) and key.value == "icon":
+                          if isinstance(value, ScalarNode) and value.tag.endswith(":str"):
+                              yield value
+                      yield from icon_nodes(value)
+              elif isinstance(node, SequenceNode):
+                  for item in node.value:
+                      yield from icon_nodes(item)
+
+          ICON_LINE_SUFFIXES = (".yaml", ".yml")
+          profiles = sorted(
+              path
+              for path in Path("profiles").rglob("*")
+              if path.is_file() and path.suffix.lower() in ICON_LINE_SUFFIXES
+          )
+          if not profiles:
+              print("No profile YAML files found.")
+              raise SystemExit(0)
+
+          imported: dict[str, str | None] = {}
+          rewritten_count = 0
+          for profile_path in profiles:
+              text = profile_path.read_text(encoding="utf-8")
+              yaml.safe_load(text)  # Validate before making textual edits.
+              root = yaml.compose(text)
+              replacements = []
+
+              for node in icon_nodes(root):
+                  url = node.value
+                  parsed = urlsplit(url)
+                  if not parsed.scheme or not parsed.netloc:
+                      continue
+                  if is_own_repository_url(url):
+                      continue
+                  if not parsed.path.lower().endswith(".svg"):
+                      print(f"Leaving external non-SVG icon unchanged: {url}")
+                      continue
+
+                  if url not in imported:
+                      imported[url] = import_svg(url)
+                  local_cdn_url = imported[url]
+                  if local_cdn_url:
+                      replacements.append(
+                          (node.start_mark.index, node.end_mark.index, json.dumps(local_cdn_url))
+                      )
+
+              for start, end, replacement in sorted(replacements, reverse=True):
+                  text = text[:start] + replacement + text[end:]
+                  rewritten_count += 1
+              if replacements:
+                  yaml.safe_load(text)
+                  profile_path.write_text(text, encoding="utf-8", newline="\n")
+                  print(f"Rewrote {len(replacements)} icon link(s) in {profile_path}")
+
+          print(f"Imported {sum(value is not None for value in imported.values())} external SVG URL(s); rewrote {rewritten_count} icon link(s).")
+          PY
+
+      - name: Commit imported icons and profile updates
+        shell: bash
+        run: |
+          git add --all
+          if git diff --cached --quiet; then
+            echo "No external SVG icons required importing."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(icons): import external SVG profile icons"
+          git push origin "HEAD:${GITHUB_REF}"
