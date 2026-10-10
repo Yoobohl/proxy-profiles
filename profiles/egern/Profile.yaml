@@ -569,25 +569,25 @@
       "match": "dns.google"
       "policy": "默认代理"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/private.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/private.yaml"
       "policy": "直连"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/geolocation-cn.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/geolocation-cn.yaml"
       "policy": "直连"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/games_cn.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/games_cn.yaml"
       "policy": "直连"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/epicgames.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/epicgames.yaml"
       "policy": "直连"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/nvidia_cn.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/nvidia_cn.yaml"
       "policy": "直连"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/apple_cn.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/apple_cn.yaml"
       "policy": "直连"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/microsoft_cn.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/microsoft_cn.yaml"
       "policy": "直连"
   - "domain":
       "match": "fsend.cn"
@@ -606,97 +606,97 @@
               "or":
                 "match":
                   - "rule_set":
-                      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/cn_additional.yaml"
+                      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/cn_additional.yaml"
                   - "rule_set":
-                      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/cn_ip.yaml"
+                      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/cn_ip.yaml"
                       "no_resolve": true
       "policy": "REJECT"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/category-ads.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/category-ads.yaml"
       "policy": "AdBlock"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/googlefcm.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/googlefcm.yaml"
       "policy": "FCM"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/youtube.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/youtube.yaml"
       "policy": "YouTube"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/google.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/google.yaml"
       "policy": "Google"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/google_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/google_ip.yaml"
       "policy": "Google"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/ai.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/ai.yaml"
       "policy": "AI"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/github.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/github.yaml"
       "policy": "默认代理"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/microsoft.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/microsoft.yaml"
       "policy": "Microsoft"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/microsoft_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/microsoft_ip.yaml"
       "policy": "Microsoft"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/apple.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/apple.yaml"
       "policy": "Apple"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/apple_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/apple_ip.yaml"
       "policy": "Apple"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/telegram.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/telegram.yaml"
       "policy": "Telegram"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/telegram_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/telegram_ip.yaml"
       "policy": "Telegram"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/steam.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/steam.yaml"
       "policy": "Steam"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/steam_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/steam_ip.yaml"
       "policy": "Steam"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/tiktok.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/tiktok.yaml"
       "policy": "TikTok"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/tiktok_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/tiktok_ip.yaml"
       "policy": "TikTok"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/twitter.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/twitter.yaml"
       "policy": "Twitter"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/twitter_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/twitter_ip.yaml"
       "policy": "Twitter"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/meta.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/meta.yaml"
       "policy": "Meta"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/facebook_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/facebook_ip.yaml"
       "policy": "Meta"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/line.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/line.yaml"
       "policy": "Line"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/netflix.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/netflix.yaml"
       "policy": "Netflix"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/netflix_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/netflix_ip.yaml"
       "policy": "Netflix"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/emby.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/emby.yaml"
       "policy": "Emby"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/emos.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/emos.yaml"
       "policy": "Emby"
   - "domain_suffix":
       "match": "mb3admin.com"
@@ -708,35 +708,35 @@
       "match": "emby"
       "policy": "Emby"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/pikpak.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/pikpak.yaml"
       "policy": "PikPak"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/spotify.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/spotify.yaml"
       "policy": "Spotify"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/spotify_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/spotify_ip.yaml"
       "policy": "Spotify"
       "no_resolve": true
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/cryptocurrency.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/cryptocurrency.yaml"
       "policy": "Crypto"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/paypal.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/paypal.yaml"
       "policy": "PayPal"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/patreon.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/patreon.yaml"
       "policy": "Patreon"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/ehentai.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/ehentai.yaml"
       "policy": "EHentai"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/geolocation-!cn.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/geolocation-!cn.yaml"
       "policy": "默认代理"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/cn_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/cn_ip.yaml"
       "policy": "直连"
   - "rule_set":
-      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@feat-egern-profile/rules/egern/private_ip.yaml"
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/private_ip.yaml"
       "policy": "直连"
   - "default":
       "policy": "漏网之鱼"
