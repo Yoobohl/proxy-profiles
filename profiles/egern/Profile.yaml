@@ -88,7 +88,7 @@
         - "手动选择"
         - "自动选择"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Proxy.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Proxy.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "手动选择"
@@ -96,7 +96,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)^(?!.*(?:群|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|电报|频道|无法|说明|提示|访问|支持|教程|关注|更新|作者|加入|超时|收藏|优惠|福利|邀请|好友|失联|选择|剩余|公益|发布|DIZTNA|通路|登录|定时|渠道|牢记|永久|余额|阁下|本站|刷新|导航|建议|重置|以下|过滤|⚠️|@|t\\.me\\/\\+|\\bexpire\\b|\\bhttps?:\\/\\/|\\.com|\\btraffic\\b)).*$"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Static.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Static.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "auto_test":
       "name": "自动选择"
@@ -109,7 +109,7 @@
       "timeout": 3
       "latency_test_url": "https://www.apple.com/library/test/success.html"
       "hidden": true
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Auto.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Auto.png"
   - "select":
       "name": "FCM"
       "policies":
@@ -125,7 +125,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Fcm.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Fcm.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "YouTube"
@@ -141,7 +141,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/YouTube.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/YouTube.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Google"
@@ -157,7 +157,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Google.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Google.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "AI"
@@ -173,7 +173,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/OpenAI.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/OpenAI.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Microsoft"
@@ -190,7 +190,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Microsoft.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Microsoft.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Apple"
@@ -207,7 +207,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Apple.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Apple.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Telegram"
@@ -223,7 +223,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Telegram.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Telegram.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Steam"
@@ -240,7 +240,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Steam.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Steam.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "TikTok"
@@ -256,7 +256,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/TikTok.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/TikTok.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Twitter"
@@ -272,7 +272,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Twitter.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Twitter.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Meta"
@@ -288,7 +288,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Meta.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Meta.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Line"
@@ -304,7 +304,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Line.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Line.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Netflix"
@@ -320,7 +320,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Netflix.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Netflix.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Emby"
@@ -337,7 +337,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Emby.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Emby.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "PikPak"
@@ -354,7 +354,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/PikPak.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/PikPak.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Spotify"
@@ -371,7 +371,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Spotify.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Spotify.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Crypto"
@@ -387,7 +387,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Bitcoin.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Bitcoin.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "PayPal"
@@ -403,7 +403,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/PayPal.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/PayPal.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "Patreon"
@@ -419,7 +419,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Patreon.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Patreon.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "EHentai"
@@ -436,7 +436,7 @@
         - "低倍率节点"
         - "高倍率节点"
         - "其他节点"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/EHentai.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/EHentai.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "NSFW"
@@ -459,20 +459,20 @@
       "name": "AdBlock"
       "policies":
         - "REJECT"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/AdBlock.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/AdBlock.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "漏网之鱼"
       "policies":
         - "默认代理"
         - "直连"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Stack.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Stack.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "直连"
       "policies":
         - "DIRECT"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/China.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/China.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "香港"
@@ -480,7 +480,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\\s*kong)"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/HongKong.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/HongKong.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "日本"
@@ -488,7 +488,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇯🇵|日本|东京|大阪|京都|(?<![A-Za-z])JPN?(?![A-Za-z])|japan)"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Japan.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Japan.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "美国"
@@ -496,7 +496,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇺🇸|美国|纽约|洛杉矶|旧金山|芝加哥|休斯顿|迈阿密|西雅图|波士顿|华盛顿|拉斯维加斯|圣何塞|圣地亚哥|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\\s*states)"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/America.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/America.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "新加坡"
@@ -504,7 +504,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore)"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Singapore.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Singapore.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "台湾省"
@@ -512,7 +512,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(🇹🇼|台湾|台北|高雄|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Taiwan.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Taiwan.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "低倍率节点"
@@ -520,7 +520,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(^(?!.*(?:剩|期)).*(?:(?<!\\d)0(\\.[0-5]|[*×✕✖⨯⨉x倍]))|(?:[*×✕✖⨯⨉x]0)|^(?!.*(?:客户端|软件)).*下载|低倍|免费|(?<![A-Za-z])free(?![A-Za-z]))"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Available.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Available.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "高倍率节点"
@@ -528,7 +528,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)(?:[*×✕✖⨯⨉x](?:[2-9]\\d*|[1-9]\\d+)(?:\\.\\d+)?)|(?:(?<![\\d.])(?:[2-9]\\d*|[1-9]\\d+)(?:\\.\\d+)?(?:倍|[*×✕✖⨯⨉x]))"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/Airport.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/Airport.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
       "name": "其他节点"
@@ -536,7 +536,7 @@
         - "机场订阅"
       "flatten": true
       "filter": "(?i)^(?!.*(?:🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\\s*kong|🇯🇵|日本|东京|大阪|京都|(?<![A-Za-z])JPN?(?![A-Za-z])|japan|🇺🇸|美国|纽约|洛杉矶|旧金山|芝加哥|休斯顿|迈阿密|西雅图|波士顿|华盛顿|拉斯维加斯|圣何塞|圣地亚哥|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\\s*states|🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore|🇹🇼|台湾|台北|高雄|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)).*$"
-      "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/WorldMap.svg"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/WorldMap.png"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
 "rules":
   - "domain":
