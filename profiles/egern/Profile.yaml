@@ -68,6 +68,13 @@
     - "tls://223.5.5.5"
     - "https://doh.pub/dns-query"
 "policy_groups":
+  - "external":
+      "name": "机场订阅"
+      "type": "select"
+      "urls": []
+      "filter": "(?i)^(?!.*(?:群|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|电报|频道|无法|说明|提示|访问|支持|教程|关注|更新|作者|加入|超时|收藏|优惠|福利|邀请|好友|失联|选择|剩余|公益|发布|DIZTNA|通路|登录|定时|渠道|牢记|永久|余额|阁下|本站|刷新|导航|建议|重置|以下|过滤|⚠️|@|t\\.me\\/\\+|\\bexpire\\b|\\bhttps?:\\/\\/|\\.com|\\btraffic\\b)).*$"
+      "update_interval": 86400
+      "hidden": true
   - "select":
       "name": "默认代理"
       "policies":
@@ -514,13 +521,6 @@
       "filter": "(?i)^(?!.*(?:🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\\s*kong|🇯🇵|日本|东京|大阪|京都|(?<![A-Za-z])JPN?(?![A-Za-z])|japan|🇺🇸|美国|纽约|洛杉矶|旧金山|芝加哥|休斯顿|迈阿密|西雅图|波士顿|华盛顿|拉斯维加斯|圣何塞|圣地亚哥|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\\s*states|🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore|🇹🇼|台湾|台北|高雄|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)).*$"
       "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/WorldMap.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
-  - "external":
-      "name": "机场订阅"
-      "type": "select"
-      "urls": []
-      "filter": "(?i)^(?!.*(?:群|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|电报|频道|无法|说明|提示|访问|支持|教程|关注|更新|作者|加入|超时|收藏|优惠|福利|邀请|好友|失联|选择|剩余|公益|发布|DIZTNA|通路|登录|定时|渠道|牢记|永久|余额|阁下|本站|刷新|导航|建议|重置|以下|过滤|⚠️|@|t\\.me\\/\\+|\\bexpire\\b|\\bhttps?:\\/\\/|\\.com|\\btraffic\\b)).*$"
-      "update_interval": 86400
-      "hidden": true
 "rules":
   - "domain":
       "match": "cloudflare-dns.com"
