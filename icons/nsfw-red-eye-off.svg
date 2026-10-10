@@ -1,0 +1,8 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NSFW icon">
+  <g fill="none" stroke="#FF2A2A" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 48C28 31 45 22 64 22C83 22 100 31 112 48C100 65 83 74 64 74C45 74 28 65 16 48Z" stroke-width="8"/>
+    <circle cx="64" cy="48" r="14" stroke-width="8"/>
+    <path d="M30 22L98 90" stroke-width="12"/>
+  </g>
+  <text x="64" y="113" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="1" fill="#FF2A2A">NSFW</text>
+</svg>
