@@ -710,6 +710,10 @@
   - "rule_set":
       "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/nsfw.yaml"
       "policy": "NSFW"
+  # 国内域名兜底：保留前面的业务策略优先级，避免仅依赖中国 IP 判断直连。
+  - "rule_set":
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/cn.yaml"
+      "policy": "直连"
   - "rule_set":
       "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/geolocation-!cn.yaml"
       "policy": "默认代理"
