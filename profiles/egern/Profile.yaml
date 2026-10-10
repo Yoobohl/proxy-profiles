@@ -439,6 +439,23 @@
       "icon": "https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/EHentai.svg"
       "latency_test_url": "https://www.apple.com/library/test/success.html"
   - "select":
+      "name": "NSFW"
+      "policies":
+        - "默认代理"
+        - "手动选择"
+        - "自动选择"
+        - "直连"
+        - "香港"
+        - "日本"
+        - "美国"
+        - "新加坡"
+        - "台湾省"
+        - "低倍率节点"
+        - "高倍率节点"
+        - "其他节点"
+      "icon": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/icons/nsfw-red-eye-off.svg"
+      "latency_test_url": "https://www.apple.com/library/test/success.html"
+  - "select":
       "name": "AdBlock"
       "policies":
         - "REJECT"
@@ -689,6 +706,9 @@
   - "rule_set":
       "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/ehentai.yaml"
       "policy": "EHentai"
+  - "rule_set":
+      "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/nsfw.yaml"
+      "policy": "NSFW"
   - "rule_set":
       "match": "https://cdn.jsdmirror.com/gh/Yoobohl/proxy-profiles@main/rules/egern/geolocation-!cn.yaml"
       "policy": "默认代理"
